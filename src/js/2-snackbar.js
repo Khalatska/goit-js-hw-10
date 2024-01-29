@@ -1,6 +1,8 @@
 
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import iconError from '../img/bi_x-octagon.png';
+import iconCorrect from '../img/bi_check2-circle.png'
 
 
 const formElem = document.querySelector('.form');
@@ -28,24 +30,26 @@ function onFormSubmit(e){
 
     promise.then(result => {
         iziToast.show({
-            message:`✅ Fulfilled promise in ${delay}ms`,
+            message:`Fulfilled promise in ${delay}ms`,
             backgroundColor: '#59A10D',
             messageColor: '#FFF',
             messageSize: '16px',
             position: 'topRight',
             maxWidth: '383px',
             titleLineHeight: '1.5',
+            iconUrl: iconCorrect,
         });
     })
         .catch(err => {
         iziToast.show({
-            message: `❌ Rejected promise in ${delay}ms`,
+            message: `Rejected promise in ${delay}ms`,
             backgroundColor: '#EF4040',
             messageColor: '#FFF',
             messageSize: '16px',
             position: 'topRight',
             maxWidth: '302px',
             titleLineHeight: '1.5',
+            iconUrl: iconError,
         });
     });
 }  

@@ -20,19 +20,24 @@ body{
     height: 40px;
     padding: 8px;
     box-sizing: border-box;
+    color: #2E2F42;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04;
 }
 
-[type='text']:hover {
+  [type='text']:disabled {
+    color: #808080;
+    border-color: #808080;
+  }
+
+  [type='text']:hover {
     border-color: #000;
   }
   
   [type='text']:active {
     border-color: #4e75ff;
-  }
-  
-  [type='text']:disabled {
-    color: #808080;
-    border-color: #808080;
   }
  
 button[data-start]{
@@ -122,6 +127,13 @@ button[data-start]:focus{
     border-radius: 4px;
     border: 1px solid #808080;
     margin-bottom: 30px;
+    color: #2E2F42;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04;
+    box-sizing: border-box;
+    padding: 8px 16px;
 }
 
 .text-input:hover,

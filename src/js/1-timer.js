@@ -3,6 +3,7 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import iconError from '../img/bi_x-octagon.png'
 
 
 let userSelectedDate;
@@ -30,6 +31,7 @@ flatpickr("#datetime-picker", {
             position: 'topRight',
             maxWidth: '302px',
             titleLineHeight: '1.5',
+            iconUrl: iconError,
         });
     } else { startBtn.removeAttribute('disabled');
     }
