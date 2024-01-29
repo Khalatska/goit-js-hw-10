@@ -1,9 +1,6 @@
  
 @import url('./reset.css');
 
-
-
-
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -15,8 +12,77 @@ body{
 /* .iziToast-close {
     color: #fff !important;
 } */
+
+#datetime-picker{
+    border-radius: 4px;
+    border-radius: 1px solid #808080;
+    width: 272px;
+    height: 40px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#datetime-picker::placeholder{
+    color: #2E2F42;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+button[data-start]{
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: #CFCFCF;
+    color: #989898;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+.input-btn-together{
+    display: flex;
+    gap: 8px;
+}
+
+
+.timer {
+    display: flex;
+    gap: 24px;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.value{
+    color: #2E2F42;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.04px;
+}
+
+.label{
+    color: #2E2F42;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
  
-/*-----------task1--------------------*/
+/*-----------task2--------------------*/
 .form{
     padding-top: 36px;
     display: flex;
@@ -26,7 +92,13 @@ body{
 
 
 }
-.form input[name="delay"] {
+
+.delay-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-input {
     width: 360px;
     height: 40px;
     border-radius: 4px;
@@ -34,14 +106,15 @@ body{
     margin-bottom: 30px;
 }
 
-.form input[name="delay"]::placeholder{
+.text-input::placeholder {
     color: #2E2F42;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.04em;
- 
 }
+
+ 
 
 .form label{
     color: #2E2F42;
@@ -50,13 +123,6 @@ body{
     line-height: 1.5;
     letter-spacing: 0.04em;
 }
-
-
- 
-/* .form input[name="delay"] label {
-    display: flex;
-    flex-direction: column;
-} */
 
 .form fieldset{
 width: 360px;
@@ -67,6 +133,7 @@ justify-content: center;
 border-radius: 4px;
 border: 1px solid #808080;
 margin-bottom: 32px;
+box-sizing: border-box;
 }
 
 .form fieldset legend {
@@ -76,12 +143,23 @@ margin-bottom: 32px;
     line-height: 1.5;
     letter-spacing: 0.04em;
 }
-
+.state-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.state-label-input{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 48px;
+}
 
 .form input[name="state"] {
     border-color: #757575;
-    height: 32px;
-    width: 32px;
+    height: 20px;
+    width: 20px;
 }
 
 .form button {

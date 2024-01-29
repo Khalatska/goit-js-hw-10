@@ -11,21 +11,23 @@
 </head>
 <body>
     <form class="form">
-        <label>
+        <label class="delay-input">
           Delay (ms)
-          <input type="number" name="delay" required />
+          <input type="number" name="delay" required class="text-input"/>
         </label>
       
         <fieldset>
           <legend>State</legend>
-          <label>
+          <div class = "state-label-input"> 
+          <label class="state-input">
             <input type="radio" name="state" value="fulfilled" required />
             Fulfilled
           </label>
-          <label>
+          <label class="state-input">
             <input type="radio" name="state" value="rejected" required />
             Rejected
           </label>
+        </div>
         </fieldset>
       
         <button type="submit">Create notification</button>
