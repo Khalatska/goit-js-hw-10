@@ -2,13 +2,20 @@
 @import url('./reset.css');
 
 
-/*-----------task1--------------------*/
 
 
 body{
     font-family: 'Montserrat', sans-serif;
 }
 
+
+
+/*-----------task1--------------------*/
+
+/* .iziToast-close {
+    color: #fff !important;
+} */
+ 
 /*-----------task1--------------------*/
 .form{
     padding-top: 36px;
