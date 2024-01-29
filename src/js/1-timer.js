@@ -7,6 +7,10 @@ import "izitoast/dist/css/iziToast.min.css";
 
 let userSelectedDate;
 const startBtn = document.querySelector('button[data-start]');
+const timePicker = document.querySelector('#datetime-picker');
+
+startBtn.disabled = true;
+timePicker.disabled = false;
  
 flatpickr("#datetime-picker", { 
     enableTime: true,
@@ -78,7 +82,10 @@ class Timer {
 
 const timer = new Timer(tick);
 
-startBtn.addEventListener('click', () => {timer.start();
+startBtn.addEventListener('click', () => {
+  timer.start();
+  startBtn.disabled = true;
+  timePicker.disabled = true;
 });
 
  

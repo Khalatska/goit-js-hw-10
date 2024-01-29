@@ -5,6 +5,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 const formElem = document.querySelector('.form');
 
+
 formElem.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e){
