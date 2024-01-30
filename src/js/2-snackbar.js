@@ -2,7 +2,8 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import iconError from '../img/bi_x-octagon.png';
-import iconCorrect from '../img/bi_check2-circle.png'
+import iconCorrect from '../img/bi_check2-circle.png';
+import iconX from '../img/bi_x-lg.png';
 
 
 const formElem = document.querySelector('.form');
@@ -35,9 +36,17 @@ function onFormSubmit(e){
             messageColor: '#FFF',
             messageSize: '16px',
             position: 'topRight',
-            maxWidth: '383px',
             titleLineHeight: '1.5',
             iconUrl: iconCorrect,
+            close: false,
+            buttons: [
+              [
+                `<button type="button" style="background-color:#59A10D"><img src=${iconX}></button>`,
+                function (instance, toast) {
+                  instance.hide({ transitionOut: 'fadeOut' }, toast);
+                },
+              ],
+            ],
         });
     })
         .catch(err => {
@@ -47,9 +56,17 @@ function onFormSubmit(e){
             messageColor: '#FFF',
             messageSize: '16px',
             position: 'topRight',
-            maxWidth: '302px',
             titleLineHeight: '1.5',
             iconUrl: iconError,
+            close: false,
+            buttons: [
+              [
+                `<button type="button" style="background-color:#EF4040"><img src=${iconX}></button>`,
+                function (instance, toast) {
+                  instance.hide({ transitionOut: 'fadeOut' }, toast);
+                },
+              ],
+            ],
         });
     });
 }  
